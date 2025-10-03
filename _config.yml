@@ -13,17 +13,17 @@ title                    : "Bandi Timea-Evelyne"
 title_separator          : "-"
 name                     : &name "Bandi Timea-Evelyne"
 description              : &description "Bandi Timea-Evelyne's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://timi23-2004.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "https://timi23-2004.github.io/bandi_timi_evelyne.github.io/"
+baseurl                  : "/bandi_timi_evelyne.github.io" # the subpath of your site, e.g. "/blog"
+repository               : "timi23-2004/bandi_timi_evelyne.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/profil.png"
+  avatar           : "/images/profil.png"
   name             : "Bandi Timea-Evelyne" # The name to display in the author profile
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
