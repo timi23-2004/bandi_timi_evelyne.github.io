@@ -23,7 +23,7 @@ repository               : "timi23-2004/bandi_timi_evelyne.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/profil.png"
+  avatar           : "profile.png"
   name             : "Bandi Timea-Evelyne" # The name to display in the author profile
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
