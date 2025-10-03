@@ -23,7 +23,7 @@ repository               : "https://timi23-2004.github.io/bandi_timi_evelyne.git
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "images/profil.jpeg"
   name             : "Bandi Timea-Evelyne" # The name to display in the author profile
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/timi23-2004"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
