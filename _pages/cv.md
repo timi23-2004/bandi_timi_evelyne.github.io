@@ -16,6 +16,11 @@ Education
 
 Work Experience
 ======
+* **March 2025 - Present: Computer Science & Robotics Instructor**
+  * Impact Academy and Camp, Târgu Mureș
+  * Teaching computer science and robotics to children
+  * Developing educational programs and interactive learning experiences
+
 * **Summer 2025: Intern** 
   * Bitdefender
   * Worked on a C-based project for detecting attacks on Matter devices within networks
