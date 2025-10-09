@@ -21,6 +21,6 @@ Feel free to get in touch with me! I'm always open to discussing programming, co
 
 &#128187; GitHub: [timi23-2004](https://github.com/timi23-2004)
 
-&#127760; Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)
+s
 
 
