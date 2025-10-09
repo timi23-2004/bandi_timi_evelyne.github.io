@@ -90,18 +90,8 @@ $(document).ready(function () {
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
-  // Initialize theme and icon based on current state
-  const initialTheme = localStorage.getItem("theme") || (browserPref === "dark" ? "dark" : "light");
-  setTheme(initialTheme);
-  
-  // Update icon to match current theme state on page load
-  const currentTheme = $("html").attr("data-theme") || (browserPref === "dark" ? "dark" : "light");
-  if (currentTheme === "dark") {
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-  } else {
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
-  }
-  
+  // If the user hasn't chosen a theme, follow the OS preference
+  setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {
           if (!localStorage.getItem("theme")) {
