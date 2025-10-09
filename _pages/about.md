@@ -17,34 +17,10 @@ As a dedicated student, I continuously strive to expand my knowledge and learn n
 
 Feel free to get in touch with me! I'm always open to discussing programming, collaborating on projects, or connecting with fellow developers.
 
-<!-- HTML Entity kódok -->
 &#128231; Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)
 
 &#128187; GitHub: [timi23-2004](https://github.com/timi23-2004)
 
 &#127760; Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)
 
----
-
-<!-- Font Awesome ikonok -->
-<i class="fas fa-envelope"></i> Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)
-
-<i class="fab fa-github"></i> GitHub: [timi23-2004](https://github.com/timi23-2004)
-
-<i class="fas fa-globe"></i> Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)
-
----
-
-<!-- Unicode escape kódok CSS-sel -->
-<style>
-.unicode-email::before { content: "\1F4E7"; margin-right: 5px; }
-.unicode-github::before { content: "\1F4BB"; margin-right: 5px; }
-.unicode-website::before { content: "\1F310"; margin-right: 5px; }
-</style>
-
-<span class="unicode-email">Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)</span>
-
-<span class="unicode-github">GitHub: [timi23-2004](https://github.com/timi23-2004)</span>
-
-<span class="unicode-website">Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)</span>
 
