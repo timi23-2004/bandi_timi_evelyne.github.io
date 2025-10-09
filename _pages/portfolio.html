@@ -48,6 +48,19 @@ author_profile: true
   height: 200px;
   object-fit: cover;
   display: block;
+  background-color: var(--global-border-color, #eee);
+}
+
+.portfolio-card .img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--global-border-color, #eee) 0%, var(--global-bg-color, #f9f9f9) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--global-text-color-light, #888);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--global-border-color, #ddd);
 }
 
 .portfolio-card figcaption {
@@ -91,16 +104,22 @@ author_profile: true
   {% for post in site.portfolio %}
     <article class="portfolio-card">
       <figure>
-        {% if post.header.teaser %}
-          <img src="{{ base_path }}{{ post.header.teaser }}" alt="{{ post.title }}">
-        {% elsif post.excerpt contains '<img' %}
-          {% assign img_tag = post.excerpt | split: '<img' | last | split: '>' | first %}
-          {% assign src = img_tag | split: 'src=' | last | split: ' ' | first | remove: '"' | remove: "'" %}
-          {% assign alt = img_tag | split: 'alt=' | last | split: ' ' | first | remove: '"' | remove: "'" %}
-          <img src="{{ base_path }}{{ src }}" alt="{{ alt }}">
+        {% assign image_name = "" %}
+        {% if post.title contains "Első" %}
+          {% assign image_name = "elso.png" %}
+        {% elsif post.title contains "Második" %}
+          {% assign image_name = "masodik.png" %}
+        {% elsif post.title contains "Harmadik" or post.title contains "Webes" %}
+          {% assign image_name = "harmadik.png" %}
+        {% elsif post.title contains "Negyedik" %}
+          {% assign image_name = "harmadik.png" %}
+        {% elsif post.title contains "Gyakorlat" %}
+          {% assign image_name = "profile.png" %}
         {% else %}
-          <img src="{{ base_path }}/images/placeholder.png" alt="{{ post.title }}">
+          {% assign image_name = "elso.png" %}
         {% endif %}
+        
+        <img src="{{ base_path }}/images/{{ image_name }}" alt="{{ post.title }}" loading="lazy">
         
         <figcaption>
           <h3 class="title">{{ post.title }}</h3>
