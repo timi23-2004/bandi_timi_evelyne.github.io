@@ -11,54 +11,49 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **University Student** - UMFST George Emil Palade, Computer Science, 2023 - Present
+* **High School Diploma** - Németh László Theoretical High School, Baia Mare, Romania, 2019 - 2023
 
-Work experience
+Work Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **Summer 2025: Intern** 
+  * Bitdefender
+  * Worked on a C-based project for detecting attacks on Matter devices within networks
+  * Gained hands-on experience in cybersecurity and network security
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* **Summer 2024: Intern**
+  * Webapix
+  * Summer internship focused on Laravel framework development
+  * Learned web development fundamentals and PHP-based technologies
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming Languages**
+  * C, C++, C#
+  * Java, Kotlin
+  * Python
 
-Publications
+* **Frameworks & Technologies**
+  * .NET Framework
+  * Laravel
+  * Android Studio
+
+* **Web Development**
+  * HTML, CSS
+
+* **Databases**
+  * SQL, MS-SQL
+
+* **Software Tools**
+  * MS Office Suite 
+
+Languages
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+* **Hungarian**: Native proficiency
+* **Romanian**: Native proficiency  
+* **English**: B1 level
+* **German**: A2 level
+
+Other Qualifications
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* **Driving License**: Category B
