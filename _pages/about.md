@@ -9,14 +9,7 @@ redirect_from:
 
 ## About Me
 
-I am a third-year student at UMFST George Emil Palade, passionate about scientific research and academic excellence. My journey in higher education has sparked a deep interest in exploring various fields of study and contributing to the academic community through research and collaboration.
+I am a third-year university student at UMFST George Emil Palade, where I passionately study programming and computer science. I have gained experience in several programming languages: I am proficient in C/C++, Java, C#, and Kotlin, and I also have basic knowledge in Python.
 
-## Research Interests
+As a dedicated student, I continuously strive to expand my knowledge and learn new technologies. I am open to new challenges and eagerly look forward to opportunities where I can apply my acquired skills in practical projects. My goal is to gain deeper expertise in the field of programming.
 
-My academic interests span across multiple disciplines, with a particular focus on [your specific field of study]. I am especially drawn to:
-
-- **[Research Area 1]**: Brief description of your interest in this area and what aspects fascinate you
-- **[Research Area 2]**: Description of another research interest and its relevance to your studies
-- **Interdisciplinary Studies**: My passion for connecting different fields of knowledge to create innovative solutions
-
-I am always eager to learn about new methodologies, participate in research projects, and engage with the broader academic community to expand my understanding and contribute meaningful insights to my field of study.
