@@ -54,9 +54,10 @@ html[data-theme="dark"] {
     --global-thead-color                : #{$background-lighter};
 }
 
-/* Also support dark mode using only CSS (no JS) when the user agent prefers dark */
+/* Also support dark mode using only CSS (no JS) when the user agent prefers dark,
+   but only if no explicit theme is set via data-theme attribute */
 @media (prefers-color-scheme: dark) {
-    :root {
+    html:not([data-theme]) {
         --global-base-color                 : #{$background};
         --global-bg-color                   : #{$background};
         --global-footer-bg-color            : #{$footer};
