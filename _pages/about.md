@@ -17,36 +17,34 @@ As a dedicated student, I continuously strive to expand my knowledge and learn n
 
 Feel free to get in touch with me! I'm always open to discussing programming, collaborating on projects, or connecting with fellow developers.
 
-<div class="contact-section" style="margin: 20px 0; display: flex; flex-wrap: wrap; gap: 15px;">
-  <a href="mailto:banditimi@yahoo.com" class="contact-link" style="display: inline-flex; align-items: center; padding: 10px 15px; background-color: #f0f0f0; border-radius: 5px; text-decoration: none; color: #333; transition: background-color 0.3s;" aria-label="Send an email to Bandi Timea-Evelyne">
-    📧 banditimi@yahoo.com
-  </a>
-  
-  <a href="https://github.com/timi23-2004" class="contact-link" style="display: inline-flex; align-items: center; padding: 10px 15px; background-color: #f0f0f0; border-radius: 5px; text-decoration: none; color: #333; transition: background-color 0.3s;" aria-label="Visit Bandi Timea-Evelyne's GitHub profile" target="_blank" rel="noopener noreferrer">
-    💻 GitHub Profile
-  </a>
-  
-  <a href="https://timi23-2004.github.io/bandi_timi_evelyne.github.io/" class="contact-link" style="display: inline-flex; align-items: center; padding: 10px 15px; background-color: #f0f0f0; border-radius: 5px; text-decoration: none; color: #333; transition: background-color 0.3s;" aria-label="Visit Bandi Timea-Evelyne's personal website" target="_blank" rel="noopener noreferrer">
-    🌐 Personal Website
-  </a>
-</div>
+<!-- HTML Entity kódok -->
+&#128231; Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)
 
+&#128187; GitHub: [timi23-2004](https://github.com/timi23-2004)
+
+&#127760; Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)
+
+---
+
+<!-- Font Awesome ikonok -->
+<i class="fas fa-envelope"></i> Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)
+
+<i class="fab fa-github"></i> GitHub: [timi23-2004](https://github.com/timi23-2004)
+
+<i class="fas fa-globe"></i> Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)
+
+---
+
+<!-- Unicode escape kódok CSS-sel -->
 <style>
-.contact-link:hover {
-  background-color: #e0e0e0 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;
-  }
-  
-  .contact-link {
-    width: 100%;
-    justify-content: center;
-  }
-}
+.unicode-email::before { content: "\1F4E7"; margin-right: 5px; }
+.unicode-github::before { content: "\1F4BB"; margin-right: 5px; }
+.unicode-website::before { content: "\1F310"; margin-right: 5px; }
 </style>
+
+<span class="unicode-email">Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)</span>
+
+<span class="unicode-github">GitHub: [timi23-2004](https://github.com/timi23-2004)</span>
+
+<span class="unicode-website">Website: [Personal Portfolio](https://timi23-2004.github.io/bandi_timi_evelyne.github.io/)</span>
 
