@@ -20,7 +20,3 @@ Feel free to get in touch with me! I'm always open to discussing programming, co
 &#128231; Email: [banditimi@yahoo.com](mailto:banditimi@yahoo.com)
 
 &#128187; GitHub: [timi23-2004](https://github.com/timi23-2004)
-
-s
-
-
