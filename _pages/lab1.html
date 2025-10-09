@@ -8,20 +8,46 @@ author_profile: true
 <!-- _pages/lab1.html -->
 
 <style>
+/* Reszponzív sakktábla vw alapú méretezéssel */
 #sakktabla {
-    border: 2px solid #333;
-    margin: 20px auto;
+    border: 0.25vw solid #333;
+    margin: 2vw auto;
     border-collapse: collapse;
+    max-width: 90vw;
+    width: 60vw;
+    min-width: 320px;
 }
 
 #sakktabla td {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #333;
+    width: 7.5vw;
+    height: 7.5vw;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 40px;
+    min-height: 40px;
+    border: 0.1vw solid #333;
     text-align: center;
     vertical-align: middle;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
 }
 
+/* Fókuszállapotok */
+#sakktabla td:focus {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 5px #0066cc;
+    z-index: 10;
+}
+
+#sakktabla td:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+/* Alapértelmezett sakktábla színek */
 #sakktabla tr:nth-child(odd) td:nth-child(odd) {
     background-color: #f0d9b5;
 }
@@ -37,39 +63,119 @@ author_profile: true
 #sakktabla tr:nth-child(even) td:nth-child(even) {
     background-color: #f0d9b5;
 }
+
+/* Magas kontraszt mód */
+@media (prefers-contrast: high) {
+    #sakktabla {
+        border: 0.25vw solid #000000;
+    }
+    
+    #sakktabla td {
+        border: 0.1vw solid #000000;
+    }
+    
+    #sakktabla tr:nth-child(odd) td:nth-child(odd) {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    #sakktabla tr:nth-child(odd) td:nth-child(even) {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    #sakktabla tr:nth-child(even) td:nth-child(odd) {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    #sakktabla tr:nth-child(even) td:nth-child(even) {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    
+    #sakktabla td:focus {
+        outline: 4px solid #ff0000;
+        outline-offset: 2px;
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 6px #ff0000;
+    }
+}
+
+/* Csökkentett mozgás preferencia */
+@media (prefers-reduced-motion: reduce) {
+    #sakktabla td {
+        transition: none;
+    }
+    
+    #sakktabla td:hover {
+        transform: none;
+    }
+}
+
+/* Tablet méret */
+@media (max-width: 768px) {
+    #sakktabla {
+        width: 80vw;
+    }
+    
+    #sakktabla td {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+/* Mobil méret */
+@media (max-width: 480px) {
+    #sakktabla {
+        width: 95vw;
+        margin: 1vw auto;
+    }
+    
+    #sakktabla td {
+        width: 11.875vw;
+        height: 11.875vw;
+        min-width: 35px;
+        min-height: 35px;
+    }
+}
+
+/* Tabindex hozzáadása a cellákhoz billentyűzetes navigációhoz */
+#sakktabla td[tabindex] {
+    outline: none;
+}
 </style>
 
-<table id='sakktabla' cellspacing=0>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+<table id='sakktabla' cellspacing=0 role="grid" aria-label="Sakktábla">
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A8 mező"></td><td tabindex="0" role="gridcell" aria-label="B8 mező"></td><td tabindex="0" role="gridcell" aria-label="C8 mező"></td><td tabindex="0" role="gridcell" aria-label="D8 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E8 mező"></td><td tabindex="0" role="gridcell" aria-label="F8 mező"></td><td tabindex="0" role="gridcell" aria-label="G8 mező"></td><td tabindex="0" role="gridcell" aria-label="H8 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A7 mező"></td><td tabindex="0" role="gridcell" aria-label="B7 mező"></td><td tabindex="0" role="gridcell" aria-label="C7 mező"></td><td tabindex="0" role="gridcell" aria-label="D7 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E7 mező"></td><td tabindex="0" role="gridcell" aria-label="F7 mező"></td><td tabindex="0" role="gridcell" aria-label="G7 mező"></td><td tabindex="0" role="gridcell" aria-label="H7 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A6 mező"></td><td tabindex="0" role="gridcell" aria-label="B6 mező"></td><td tabindex="0" role="gridcell" aria-label="C6 mező"></td><td tabindex="0" role="gridcell" aria-label="D6 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E6 mező"></td><td tabindex="0" role="gridcell" aria-label="F6 mező"></td><td tabindex="0" role="gridcell" aria-label="G6 mező"></td><td tabindex="0" role="gridcell" aria-label="H6 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A5 mező"></td><td tabindex="0" role="gridcell" aria-label="B5 mező"></td><td tabindex="0" role="gridcell" aria-label="C5 mező"></td><td tabindex="0" role="gridcell" aria-label="D5 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E5 mező"></td><td tabindex="0" role="gridcell" aria-label="F5 mező"></td><td tabindex="0" role="gridcell" aria-label="G5 mező"></td><td tabindex="0" role="gridcell" aria-label="H5 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A4 mező"></td><td tabindex="0" role="gridcell" aria-label="B4 mező"></td><td tabindex="0" role="gridcell" aria-label="C4 mező"></td><td tabindex="0" role="gridcell" aria-label="D4 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E4 mező"></td><td tabindex="0" role="gridcell" aria-label="F4 mező"></td><td tabindex="0" role="gridcell" aria-label="G4 mező"></td><td tabindex="0" role="gridcell" aria-label="H4 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A3 mező"></td><td tabindex="0" role="gridcell" aria-label="B3 mező"></td><td tabindex="0" role="gridcell" aria-label="C3 mező"></td><td tabindex="0" role="gridcell" aria-label="D3 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E3 mező"></td><td tabindex="0" role="gridcell" aria-label="F3 mező"></td><td tabindex="0" role="gridcell" aria-label="G3 mező"></td><td tabindex="0" role="gridcell" aria-label="H3 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A2 mező"></td><td tabindex="0" role="gridcell" aria-label="B2 mező"></td><td tabindex="0" role="gridcell" aria-label="C2 mező"></td><td tabindex="0" role="gridcell" aria-label="D2 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E2 mező"></td><td tabindex="0" role="gridcell" aria-label="F2 mező"></td><td tabindex="0" role="gridcell" aria-label="G2 mező"></td><td tabindex="0" role="gridcell" aria-label="H2 mező"></td>
     </tr>
-    <tr>
-        <td></td><td></td><td></td><td></td>
-        <td></td><td></td><td></td><td></td>
+    <tr role="row">
+        <td tabindex="0" role="gridcell" aria-label="A1 mező"></td><td tabindex="0" role="gridcell" aria-label="B1 mező"></td><td tabindex="0" role="gridcell" aria-label="C1 mező"></td><td tabindex="0" role="gridcell" aria-label="D1 mező"></td>
+        <td tabindex="0" role="gridcell" aria-label="E1 mező"></td><td tabindex="0" role="gridcell" aria-label="F1 mező"></td><td tabindex="0" role="gridcell" aria-label="G1 mező"></td><td tabindex="0" role="gridcell" aria-label="H1 mező"></td>
     </tr>
 </table>
