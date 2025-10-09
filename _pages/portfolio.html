@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 title: "Portfolio"
 permalink: /portfolio/
 author_profile: true
@@ -7,8 +7,116 @@ author_profile: true
 
 {% include base_path %}
 
+<style>
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0;
+}
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.portfolio-card {
+  background: var(--global-bg-color, #fff);
+  border: 1px solid var(--global-border-color, #ddd);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-card figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-card figcaption {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--global-text-color, #333);
+}
+
+.portfolio-card .excerpt {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light, #666);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.portfolio-card .read-more {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.portfolio-card .read-more a {
+  color: var(--global-link-color, #0066cc);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.portfolio-card .read-more a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<div class="portfolio-grid">
+  {% for post in site.portfolio %}
+    <article class="portfolio-card">
+      <figure>
+        {% if post.header.teaser %}
+          <img src="{{ base_path }}{{ post.header.teaser }}" alt="{{ post.title }}">
+        {% elsif post.excerpt contains '<img' %}
+          {% assign img_tag = post.excerpt | split: '<img' | last | split: '>' | first %}
+          {% assign src = img_tag | split: 'src=' | last | split: ' ' | first | remove: '"' | remove: "'" %}
+          {% assign alt = img_tag | split: 'alt=' | last | split: ' ' | first | remove: '"' | remove: "'" %}
+          <img src="{{ base_path }}{{ src }}" alt="{{ alt }}">
+        {% else %}
+          <img src="{{ base_path }}/images/placeholder.png" alt="{{ post.title }}">
+        {% endif %}
+        
+        <figcaption>
+          <h3 class="title">{{ post.title }}</h3>
+          <p class="excerpt">
+            {% if post.excerpt %}
+              {{ post.excerpt | strip_html | truncate: 120 }}
+            {% else %}
+              {{ post.content | strip_html | truncate: 120 }}
+            {% endif %}
+          </p>
+          <div class="read-more">
+            <a href="{{ base_path }}{{ post.url }}">Részletek &rarr;</a>
+          </div>
+        </figcaption>
+      </figure>
+    </article>
+  {% endfor %}
+</div>
 
