@@ -27,7 +27,8 @@ let setTheme = (theme) => {
   const use_theme =
     theme ||
     localStorage.getItem("theme") ||
-    (browserPref === "dark" ? "dark" : "light");
+    $("html").attr("data-theme") ||
+    browserPref;
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -40,8 +41,7 @@ let setTheme = (theme) => {
 
 // Toggle the theme manually
 var toggleTheme = () => {
-  // Check current state: either explicitly set or inferred from browser preference
-  const current_theme = $("html").attr("data-theme") || (browserPref === "dark" ? "dark" : "light");
+  const current_theme = $("html").attr("data-theme");
   const new_theme = current_theme === "dark" ? "light" : "dark";
   localStorage.setItem("theme", new_theme);
   setTheme(new_theme);
